@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>Students (<a href = "{{ url_for('new') }}">Add Student</a>)</h3>
+
+      <table border="1" cellpadding="10">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>City</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for student in students %}
+               <tr>
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.city }}</td>
+                  <td>{{ student.email }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </body>
+</html>
